@@ -18,9 +18,9 @@ return new class extends Migration
         $role1 = Role::create(['name' => 'user']);
         $role2 = Role::create(['name' => 'admin']);
         $role3 = Role::create(['name' => 'super-admin']);
+        $user = User::find(2);
+        $user->assignRole($role2);
 
-        $user = User::find(1);
-        $user->assignRole($role1);
     }
 
     /**
