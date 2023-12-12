@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
+
+            $table->string('customer_name');
+            $table->string('address');
+            $table->string('wilaya')->default(env('DEFAULT_WILAYA'));
+            $table->string('commune')->default(env('DEFAULT_COMMUNE'));
+            $table->string('postal_code')->default(env('DEFAULT_POSTAL_CODE'));
+            $table->string('country')->default(env('DEFAULT_COUNTRY'));
+            $table->string('email')->nullable();
+            $table->string('telephone')->nullable();
+
             $table->timestamps();
         });
     }
