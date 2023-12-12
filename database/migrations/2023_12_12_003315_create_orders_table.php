@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('telephone');
             $table->string('address');
             $table->string('city');
-            $table->integer('postal_code');
+            $table->string('postal_code');
             $table->string('country')->default(env('DEFAULT_COUNTRY'));
             $table->string('email')->nullable();
 
